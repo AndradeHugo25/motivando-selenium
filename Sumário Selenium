@@ -1,0 +1,56 @@
+1. Estrutura básica
+    - Geral
+        - finalidade, simulação do comportamento do usuário (teste funcionais)
+		- regressão
+			- power point: https://docs.google.com/presentation/d/1UFFDwDeWrdmUAs3kHeXd8p9mJxwLs4VYKXmvZ5eQcYU/edit#slide=id.g242eca4f7c5_0_68
+        - regras e boas práticas, padrões de projeto (não existe fórmula)
+		- não vamos explorar todos os recursos
+		- para aulas teóricas java, exercícios qualquer linguagem
+	- Configuração
+	    - Ferramenta de automação de compilação: Maven, Gradle, etc
+		- Properties: não obrigatório, cucumber.properties (report)
+	- Iniciando testes
+		- Drivers: ChromeDriver, GeckoDriver, etc
+			- ChromeDriver: System.setProperty("webdriver.chrome.driver", "C://Selenium-java browserstack//chromedriver_win32//chromedriver.exe");
+			- WebDriverManager: bonigarcia
+				WebDriverManager.chromedriver().setup();
+		- Inicialização do drive:
+		    - WebDriver driver = new ChromeDriver();
+		- ChromeOptions:
+			- Resolução da tela, headless, download direto, diretório download, etc
+		- Maximize, Cookies (captcha)
+		    - Cookie ck = new Cookie("captcha", "off");
+              driver.manage().addCookie(ck);
+	- Steps
+	    - Acesso à aplicação
+		- Mapeamento dos elementos
+		- Comandos básicos
+			- click, clear, sendKeys, getText, select (combo)
+		- Validação de dados (Assert, Banco de dados)
+		- Fechamento de instâncias (driver, banco de dados)
+2. Recursos e complementos
+    - Recursos
+        - Wait
+        - Annotations (hooks, before, after, beforeTest, etc)
+        - PageObjects
+        - Frame
+        - Troca de janela
+        - Cross browser
+	- Complementos
+        - Thread
+        - Print
+        - Interações com teclado e mouse
+        - Upload de arquivos
+        - Log
+        - Banco de dados (vídeo)
+3. BDD
+	- Cucumber
+		- Linguagem gherkin
+			- Funcionalidade
+			- Contexto
+			- Cenário
+			- Esquema de cenário
+			- Tabela
+		- Annotations
+		- Cucumber properties
+		- Reports
