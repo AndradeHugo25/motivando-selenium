@@ -1,0 +1,14 @@
+# Eclipse
+.classpath
+.project
+
+# IntelliJ
+.idea/
+*.iml
+
+# Outros
+.svn/
+
+# Gerados
+target/
+build/
