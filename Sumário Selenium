@@ -30,19 +30,21 @@
 		- Fechamento de instâncias (driver, banco de dados)
 2. Recursos e complementos
     - Recursos
-        - Wait
-        - Annotations (hooks, before, after, beforeTest, etc)
-        - PageObjects
-        - Frame
-        - Troca de janela
+        1. Wait
+        3. Frame
+        4. Troca de janela
+        10. Annotations (before, after, beforeTest, mencionar hooks, etc)
+        11. PageObjects
+
         - Cross browser
+
 	- Complementos
-        - Thread
-        - Print
-        - Interações com teclado e mouse
-        - Upload de arquivos
-        - Log
-        - Banco de dados (vídeo)
+        2. Thread
+        5. Print
+        6. Interações com teclado e mouse
+        7. Upload de arquivos
+        8. Log
+        9. Banco de dados (vídeo)
 3. BDD
 	- Cucumber
 		- Linguagem gherkin
@@ -51,6 +53,6 @@
 			- Cenário
 			- Esquema de cenário
 			- Tabela
-		- Annotations
+		- Annotations (Hooks)
 		- Cucumber properties
 		- Reports

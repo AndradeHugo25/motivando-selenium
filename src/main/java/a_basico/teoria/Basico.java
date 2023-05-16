@@ -14,7 +14,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.Properties;
 import java.util.Set;
 
-public class Teoria {
+public class Basico {
 
     public static void main(String[] args) {
 //        isRegressao();
@@ -66,7 +66,7 @@ public class Teoria {
     public static void isRegressao() {
         try {
             Properties props = new Properties();
-            InputStream resource = Teoria.class.getClassLoader().getResourceAsStream("motivando.properties");
+            InputStream resource = Basico.class.getClassLoader().getResourceAsStream("motivando.properties");
             props.load(new InputStreamReader(resource, StandardCharsets.UTF_8));
 
             boolean regressao = Boolean.parseBoolean(props.getProperty("regressao"));
