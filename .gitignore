@@ -17,3 +17,5 @@ build/
 ResolucaoEx1.java
 ResolucaoEx2.java
 
+/src/main/java/b_recursos_complementos/teoria/print/report
+/src/main/java/b_recursos_complementos/teoria/log/teste.txt

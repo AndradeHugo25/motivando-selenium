@@ -27,17 +27,16 @@
 		- Comandos básicos
 			- click, clear, sendKeys, getText, select (combo)
 		- Validação de dados (Assert, Banco de dados)
-		- Fechamento de instâncias (driver, banco de dados)
+		- Fechamento de instâncias (driver, banco de dados, chromedriver)
 2. Recursos e complementos
     - Recursos
         1. Wait
         3. Frame
         4. Troca de janela
-        10. Annotations (before, after, beforeTest, mencionar hooks, etc)
-        11. PageObjects
-
-        - Cross browser
-
+        10. Suite
+        11. Cross browser
+        12. Annotations (before, after, beforeTest, mencionar hooks, etc)
+        13. Mapeamento (PageObjects)
 	- Complementos
         2. Thread
         5. Print

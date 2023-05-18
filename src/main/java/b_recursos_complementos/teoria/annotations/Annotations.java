@@ -2,6 +2,8 @@ package b_recursos_complementos.teoria.annotations;
 
 import org.junit.*;
 
+import java.io.IOException;
+
 public class Annotations {
 
 //    @BeforeClass
@@ -36,7 +38,8 @@ public class Annotations {
 //    }
 //
 //    @AfterClass
-//    public static void depoisTudo() {
+//    public static void depoisTudo() throws IOException {
 //        System.out.println("\nFechando instâncias e finalizando automação!");
+//        Runtime.getRuntime().exec("taskkill /F /IM chromedriver.exe /T");
 //    }
 }
