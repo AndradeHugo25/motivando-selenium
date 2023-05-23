@@ -16,9 +16,9 @@ import java.io.File;
 public class UploadArquivos {
 
     public static void main(String[] args) throws InterruptedException, AWTException {
-        uploadSelenium();
+//        uploadSelenium();
 
-//        uploadWindows();
+        uploadWindows();
     }
 
     public static void uploadSelenium() throws InterruptedException {
@@ -69,6 +69,8 @@ public class UploadArquivos {
         robot.keyRelease(KeyEvent.VK_ENTER);
 
         Thread.sleep(2000);
+
+        driver.findElement(By.id("file-submit")).submit();
 
         if (driver.getPageSource().contains("File Uploaded!")) {
             System.out.println("UPLOAD REALIZADO!");
