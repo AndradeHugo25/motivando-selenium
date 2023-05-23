@@ -13,7 +13,7 @@ import java.util.Random;
 public class Mouse {
 
     public static void main(String[] args) throws AWTException, InterruptedException {
-//        moverMouseParaElemento();
+        moverMouseParaElemento();
 //        moverMouseAleatoriamente(5);
     }
 
@@ -25,12 +25,12 @@ public class Mouse {
 
         WebElement elemento = driver.findElement(By.xpath("/html/body/div[1]/div[3]/form/div[1]/div[1]/div[4]/center/input[2]"));
 
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
         Actions action = new Actions(driver);
         action.click(elemento).perform();
 
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
         driver.quit();
     }
