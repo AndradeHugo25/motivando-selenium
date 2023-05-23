@@ -1,5 +1,6 @@
 package b_recursos_complementos.teoria.espera;
 
+import b_recursos_complementos.teoria.log.Log;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -11,14 +12,56 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.IOException;
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
+import java.util.Objects;
 
 public class Espera {
 
     public static void main(String[] args) throws InterruptedException, IOException {
-        esperaExplicita();
-        esperaImplicita();
-        waitUsingThread();
+//        esperaImplicita();
+//        esperaImplicitaComErro();
+//        esperaExplicita();
+//        waitUsingThread();
+    }
+
+    // Implicit Wait
+    public static void esperaImplicita() {
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
+
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(6));
+
+        driver.get("https://google.com/ncr");
+        driver.findElement(By.name("q")).sendKeys("macarrão" + Keys.ENTER);
+
+        System.out.println(Log.getDataAtualFormatada("HH:mm:ss.SSS"));
+        WebElement elemento = driver.findElement(By.xpath("//a/h3"));
+        System.out.println(Log.getDataAtualFormatada("HH:mm:ss.SSS"));
+
+        System.out.println(Objects.requireNonNull(elemento).getText());
+        driver.quit();
+    }
+
+    // Implicit Wait Com Erro
+    public static void esperaImplicitaComErro() {
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
+
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(6));
+
+        driver.get("https://google.com/ncr");
+        driver.findElement(By.name("q")).sendKeys("macarrão" + Keys.ENTER);
+
+        System.out.println(Log.getDataAtualFormatada("HH:mm:ss.SSS"));
+
+        WebElement elemento = null;
+        try {
+            elemento = driver.findElement(By.xpath("//a/h3666"));
+        } catch (Exception e) {
+            System.out.println("Não achou o danado!");
+            driver.quit();
+        }
+
+        System.out.println(Log.getDataAtualFormatada("HH:mm:ss.SSS"));
     }
 
     // Explicit Wait
@@ -28,25 +71,14 @@ public class Espera {
         driver.get("https://google.com/ncr");
         driver.findElement(By.name("q")).sendKeys("macarrão" + Keys.ENTER);
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
+        System.out.println(Log.getDataAtualFormatada("HH:mm:ss.SSS"));
+
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(6));
         WebElement firstResult = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a/h3")));
 
+        System.out.println(Log.getDataAtualFormatada("HH:mm:ss.SSS"));
+
         System.out.println(firstResult.getText());
-        driver.quit();
-        Runtime.getRuntime().exec("taskkill /F /IM chromedriver.exe /T");
-    }
-
-    // Implicit Wait
-    public static void esperaImplicita() {
-        WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://google.com/ncr");
-        driver.findElement(By.name("q")).sendKeys("macarrão" + Keys.ENTER);
-
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        WebElement elemento = driver.findElement(By.xpath("//a/h3"));
-
-        System.out.println(elemento.getText());
         driver.quit();
     }
 
@@ -57,8 +89,12 @@ public class Espera {
         driver.get("https://google.com/ncr");
         driver.findElement(By.name("q")).sendKeys("macarrão" + Keys.ENTER);
 
-        Thread.sleep(5000);
+        System.out.println(Log.getDataAtualFormatada("HH:mm:ss.SSS"));
+
+        Thread.sleep(6000);
         WebElement elemento = driver.findElement(By.xpath("//a/h3"));
+
+        System.out.println(Log.getDataAtualFormatada("HH:mm:ss.SSS"));
 
         System.out.println(elemento.getText());
         driver.quit();
