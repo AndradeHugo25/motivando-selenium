@@ -13,8 +13,8 @@ import java.util.Random;
 public class Mouse {
 
     public static void main(String[] args) throws AWTException, InterruptedException {
-        moverMouseParaElemento();
-//        moverMouseAleatoriamente(5);
+//        moverMouseParaElemento();
+        moverMouseAleatoriamente(5);
     }
 
     public static void moverMouseParaElemento() throws InterruptedException {
@@ -40,8 +40,8 @@ public class Mouse {
         Robot robot = new Robot();
         Random random = new Random();
         for (int i = 0; i < qtdVezes; i++) {
-            int eixoX = random.nextInt(900);
-            int eixoY = random.nextInt(700);
+            int eixoX = random.nextInt(950);
+            int eixoY = random.nextInt(750);
 
             robot.mouseMove(eixoX, eixoY);
 
