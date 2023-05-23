@@ -68,7 +68,7 @@ public class Espera {
     }
 
     // Explicit Wait
-    public static void esperaExplicita() throws IOException {
+    public static void esperaExplicita() {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://google.com/ncr");
