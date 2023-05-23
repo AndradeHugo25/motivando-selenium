@@ -37,7 +37,7 @@ public class Espera {
         WebElement elemento = driver.findElement(By.xpath("//a/h3"));
         System.out.println(Log.getDataAtualFormatada("HH:mm:ss.SSS"));
 
-        System.out.println(Objects.requireNonNull(elemento).getText());
+        System.out.println(elemento.getText());
         driver.quit();
     }
 
@@ -74,11 +74,11 @@ public class Espera {
         System.out.println(Log.getDataAtualFormatada("HH:mm:ss.SSS"));
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(6));
-        WebElement firstResult = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a/h3")));
+        WebElement elemento = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a/h3")));
 
         System.out.println(Log.getDataAtualFormatada("HH:mm:ss.SSS"));
 
-        System.out.println(firstResult.getText());
+        System.out.println(elemento.getText());
         driver.quit();
     }
 
