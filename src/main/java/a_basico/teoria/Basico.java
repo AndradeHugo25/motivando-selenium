@@ -61,8 +61,8 @@ public class Basico {
         Assert.assertEquals("Thank You for your Message!", msg);
 
         //fechamento do driver
-        Runtime.getRuntime().exec("taskkill /F /IM chromedriver.exe /T");
         driver.quit();
+        Runtime.getRuntime().exec("taskkill /F /IM chromedriver.exe /T");
     }
 
     public static void isRegressao() {

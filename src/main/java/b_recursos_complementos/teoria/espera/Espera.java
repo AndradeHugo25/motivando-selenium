@@ -9,19 +9,20 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.IOException;
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 public class Espera {
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) throws InterruptedException, IOException {
         esperaExplicita();
         esperaImplicita();
         waitUsingThread();
     }
 
     // Explicit Wait
-    public static void esperaExplicita() {
+    public static void esperaExplicita() throws IOException {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://google.com/ncr");
@@ -32,6 +33,7 @@ public class Espera {
 
         System.out.println(firstResult.getText());
         driver.quit();
+        Runtime.getRuntime().exec("taskkill /F /IM chromedriver.exe /T");
     }
 
     // Implicit Wait
