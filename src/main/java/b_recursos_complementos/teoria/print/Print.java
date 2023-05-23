@@ -15,8 +15,8 @@ import java.util.Calendar;
 
 public class Print {
 
-    public static void main(String[] args) {
-//        printTela();
+    public static void main(String[] args) throws IOException, InterruptedException {
+        printTela();
 //        printarTela();
     }
 
@@ -27,7 +27,7 @@ public class Print {
         driver.get("https://www.w3schools.com/");
 
         File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(scrFile, new File("src/main/java/b_recursos_complementos/teoria/recursos/report/print.png"));
+        FileUtils.copyFile(scrFile, new File("src/main/java/b_recursos_complementos/teoria/recursos/print/report/print.png"));
 
         driver.quit();
     }
@@ -42,7 +42,7 @@ public class Print {
         String data = getDataAtualFormatada("yyyy_MM_dd HH-mm-ss");
 
         File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(scrFile, new File("src/main/java/b_recursos_complementos/teoria/recursos/report/"+ data + ".png"));
+        FileUtils.copyFile(scrFile, new File("src/main/java/b_recursos_complementos/teoria/print/report/"+ data + ".png"));
 
         driver.findElement(By.id("navbtn_references")).click();
         Thread.sleep(2000);
