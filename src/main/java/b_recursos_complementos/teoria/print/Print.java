@@ -27,7 +27,7 @@ public class Print {
         driver.get("https://www.w3schools.com/");
 
         File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(scrFile, new File("src/main/java/b_recursos_complementos/teoria/recursos/print/report/print.png"));
+        FileUtils.copyFile(scrFile, new File("src/main/java/b_recursos_complementos/teoria/print/report/print.png"));
 
         driver.quit();
     }
@@ -50,7 +50,7 @@ public class Print {
         data = getDataAtualFormatada("yyyy_MM_dd HH-mm-ss");
 
         scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(scrFile, new File("src/main/java/b_recursos_complementos/teoria/recursos/report/"+ data + ".png"));
+        FileUtils.copyFile(scrFile, new File("src/main/java/b_recursos_complementos/teoria/print/report/"+ data + ".png"));
 
         driver.quit();
     }
