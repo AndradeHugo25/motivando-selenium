@@ -23,7 +23,9 @@ public class Aba {
             System.out.println("Não foi possível clicar no elemento!\n");
         }
 
-        System.out.println("Janelas antes:\n");
+        System.out.println("URL ATUAL: " + driver.getCurrentUrl());
+
+        System.out.println("\nJanelas antes:\n");
 
         Set<String> janelas = driver.getWindowHandles();
         for (String janela : janelas) {
