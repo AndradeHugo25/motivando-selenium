@@ -1,7 +1,7 @@
 package b_recursos_complementos.teoria.espera;
 
 import b_recursos_complementos.teoria.log.Log;
-import io.github.bonigarcia.wdm.WebDriverManager;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -26,7 +26,7 @@ public class Espera {
 
     // Implicit Wait
     public static void esperaImplicita() {
-        WebDriverManager.chromedriver().setup();
+        //        WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
 
@@ -45,7 +45,7 @@ public class Espera {
 
     // Implicit Wait Com Erro
     public static void esperaImplicitaComErro() {
-        WebDriverManager.chromedriver().setup();
+        //        WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
 
@@ -69,7 +69,7 @@ public class Espera {
 
     // Explicit Wait
     public static void esperaExplicita() {
-        WebDriverManager.chromedriver().setup();
+        //        WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://google.com/ncr");
         driver.manage().window().maximize();
@@ -88,7 +88,7 @@ public class Espera {
 
     // Thread
     public static void waitUsingThread() throws InterruptedException {
-        WebDriverManager.chromedriver().setup();
+        //        WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://google.com/ncr");

@@ -1,6 +1,6 @@
 package b_recursos_complementos.teoria.mouse;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -18,7 +18,7 @@ public class Mouse {
     }
 
     public static void moverMouseParaElemento() throws InterruptedException {
-        WebDriverManager.chromedriver().setup();
+        //        WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://google.com/ncr");
         driver.manage().window().maximize();

@@ -13,7 +13,7 @@ public class Log {
     private static final String PATH = "src/main/java/b_recursos_complementos/teoria/log/teste.txt";
 
     public static void main(String[] args) throws IOException {
-//        escrever("Olá, mundo!");
+        escrever("Olá, mundo!");
 
 //        escrever("Hoje testamos uma geração de log!\nEspero que dê certo =D");
 

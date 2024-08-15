@@ -1,11 +1,15 @@
-package b_recursos_complementos.teoria.annotations;
-
-import org.junit.*;
-
-import java.io.IOException;
-
-public class Annotations {
-
+//package b_recursos_complementos.teoria.annotations;
+//
+//import io.cucumber.java.After;
+//import io.cucumber.java.Before;
+//import org.testng.annotations.AfterClass;
+//import org.testng.annotations.BeforeClass;
+//import org.testng.annotations.Test;
+//
+//import java.io.IOException;
+//
+//public class Annotations {
+//
 //    @BeforeClass
 //    public static void antesTudo() {
 //        System.out.println("Inicializando e configurando tudo.");
@@ -16,12 +20,12 @@ public class Annotations {
 //    public void antesCenario() {
 //        System.out.println("\niniciando cenário.");
 //    }
-
-    @Test
-    public void cenario1() {
-        System.out.println("cenário 1 em andamento...");
-    }
-
+//
+//    @Test
+//    public void cenario1() {
+//        System.out.println("cenário 1 em andamento...");
+//    }
+//
 //    @Test
 //    public void cenario2() {
 //        System.out.println("cenário 2 em andamento...");
@@ -42,4 +46,4 @@ public class Annotations {
 //        System.out.println("\nFechando instâncias e finalizando automação!");
 //        Runtime.getRuntime().exec("taskkill /F /IM chromedriver.exe /T");
 //    }
-}
+//}

@@ -1,6 +1,6 @@
 package b_recursos_complementos.teoria.upload;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -22,7 +22,6 @@ public class UploadArquivos {
     }
 
     public static void uploadSelenium() throws InterruptedException {
-        WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://the-internet.herokuapp.com/upload");
         driver.manage().window().maximize();
@@ -44,7 +43,7 @@ public class UploadArquivos {
     }
 
     public static void uploadWindows() throws InterruptedException, AWTException {
-        WebDriverManager.chromedriver().setup();
+        //        WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://the-internet.herokuapp.com/upload");
         driver.manage().window().maximize();

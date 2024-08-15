@@ -1,6 +1,6 @@
 package b_recursos_complementos.teoria.teclado;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -14,7 +14,6 @@ import java.util.Random;
 public class Teclado {
 
     public static void main(String[] args) throws AWTException, InterruptedException {
-        WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://google.com/ncr");
         driver.manage().window().maximize();

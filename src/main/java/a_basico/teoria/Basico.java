@@ -1,12 +1,11 @@
 package a_basico.teoria;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -20,7 +19,7 @@ public class Basico {
     public static void main(String[] args) throws IOException {
 //        isRegressao();
 
-        WebDriverManager.chromedriver().setup();
+//        //        WebDriverManager.chromedriver().setup();
 
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -68,7 +67,7 @@ public class Basico {
     public static void isRegressao() {
         try {
             Properties props = new Properties();
-            InputStream resource = Basico.class.getClassLoader().getResourceAsStream("motivando.properties");
+            InputStream resource = Basico.class.getClassLoader().getResourceAsStream("config.properties");
             props.load(new InputStreamReader(resource, StandardCharsets.UTF_8));
 
             boolean regressao = Boolean.parseBoolean(props.getProperty("regressao"));

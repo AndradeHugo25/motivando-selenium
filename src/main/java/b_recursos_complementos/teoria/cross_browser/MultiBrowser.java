@@ -1,6 +1,6 @@
 package b_recursos_complementos.teoria.cross_browser;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -16,11 +16,11 @@ public class MultiBrowser {
     public void setBrowser(String browser)
     {
         if (browser.equalsIgnoreCase("Edge")) {
-            WebDriverManager.edgedriver().setup();
+//            WebDriverManager.edgedriver().setup();
             driver = new EdgeDriver();
         }
         else if (browser.equalsIgnoreCase("Chrome")) {
-            WebDriverManager.chromedriver().setup();
+            //        WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
         }
         driver.manage().window().maximize();

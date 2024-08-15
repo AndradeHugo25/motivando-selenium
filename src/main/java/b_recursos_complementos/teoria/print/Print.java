@@ -1,6 +1,6 @@
 package b_recursos_complementos.teoria.print;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
@@ -21,7 +21,7 @@ public class Print {
     }
 
     public static void printTela() throws IOException {
-        WebDriverManager.chromedriver().setup();
+        //        WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://www.w3schools.com/");
@@ -34,7 +34,7 @@ public class Print {
 
     // Print
     public static void printarTela() throws IOException, InterruptedException {
-        WebDriverManager.chromedriver().setup();
+        //        WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://www.w3schools.com/");

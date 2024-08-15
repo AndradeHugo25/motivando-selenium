@@ -1,6 +1,6 @@
 package b_recursos_complementos.teoria.frame;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class Frame {
 
     public static void main(String[] args) {
-        WebDriverManager.chromedriver().setup();
+        //        WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://demoqa.com/frames");
         driver.manage().window().maximize();

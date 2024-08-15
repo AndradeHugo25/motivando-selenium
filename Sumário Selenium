@@ -1,8 +1,8 @@
 1. Estrutura básica
     - Geral
-        - finalidade, simulação do comportamento do usuário (teste funcionais)
+        - finalidade, simulação do comportamento do usuário (testes funcionais)
 		- regressão
-			- power point: https://docs.google.com/presentation/d/1UFFDwDeWrdmUAs3kHeXd8p9mJxwLs4VYKXmvZ5eQcYU/edit#slide=id.g242eca4f7c5_0_68
+			- power point: https://docs.google.com/presentation/d/1ucYgC85yKh12X4S8Qw7kCoYnXAOC5lRz/edit#slide=id.p1
         - regras e boas práticas, padrões de projeto (não existe fórmula)
 		- não vamos explorar todos os recursos
 		- para aulas teóricas java, exercícios qualquer linguagem
@@ -13,8 +13,8 @@
 		- Drivers: ChromeDriver, GeckoDriver, etc
 			- ChromeDriver: System.setProperty("webdriver.chrome.driver", "C://Selenium-java browserstack//chromedriver_win32//chromedriver.exe");
 			- WebDriverManager: bonigarcia
-				WebDriverManager.chromedriver().setup();
-		- Inicialização do drive:
+				//        WebDriverManager.chromedriver().setup();
+		- Inicialização do driver:
 		    - WebDriver driver = new ChromeDriver();
 		- ChromeOptions:
 			- Resolução da tela, headless, download direto, diretório download, etc
@@ -23,16 +23,27 @@
               driver.manage().addCookie(ck);
 	- Steps
 	    - Acesso à aplicação
-		- Mapeamento dos elementos
+		- Mapeamento dos elementos (Page Objects)
 		- Comandos básicos
 			- click, clear, sendKeys, getText, select (combo)
 		- Validação de dados (Assert, Banco de dados)
 		- Fechamento de instâncias (driver, banco de dados, chromedriver)
-2. Recursos e complementos
+2. BDD
+	- Cucumber
+		- Linguagem gherkin
+			- Funcionalidade
+			- Contexto
+			- Cenário
+			- Esquema de cenário
+			- Tabela
+		- Annotations (Hooks)
+		- Cucumber properties
+		- Reports
+3. Recursos e complementos
     - Recursos
         1. Wait
         3. Frame
-        4. Troca de janela
+        4. Troca de aba
         10. Suite
         11. Cross browser
         12. Annotations (before, after, beforeTest, mencionar hooks, etc)
@@ -44,14 +55,3 @@
         7. Upload de arquivos
         8. Log
         9. Banco de dados (vídeo)
-3. BDD
-	- Cucumber
-		- Linguagem gherkin
-			- Funcionalidade
-			- Contexto
-			- Cenário
-			- Esquema de cenário
-			- Tabela
-		- Annotations (Hooks)
-		- Cucumber properties
-		- Reports
